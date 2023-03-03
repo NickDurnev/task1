@@ -1,0 +1,21 @@
+{
+  "name": "@nick_durnev/my-lib",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/my-lib.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "version": "1.0.1",
+  "description": "Give to this library name and it returns greeting for you.",
+  "main": "dist/my-lib.js",
+  "author": "Nick Durnev",
+  "license": "ISC"
+}

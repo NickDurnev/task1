@@ -1,0 +1,17 @@
+{
+  "name": "test-work",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "static1": "npm run dev --workspace=static1",
+    "static2": "npm run dev --workspace=static2"
+  },
+  "keywords": [],
+  "author": "Nikita",
+  "license": "ISC",
+  "workspaces": [
+    "library",
+    "static1",
+    "static2"
+  ]
+}
