@@ -5,6 +5,7 @@
   "scripts": {
     "static1": "npm run dev --workspace=static1",
     "static2": "npm run dev --workspace=static2",
+    "test": "npm run test --workspace=testing",
     "build": "npm run build --ws"
   },
   "keywords": [],
@@ -13,6 +14,7 @@
   "workspaces": [
     "library",
     "static1",
-    "static2"
+    "static2",
+    "testing"
   ]
 }
