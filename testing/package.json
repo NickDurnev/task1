@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@vitest/coverage-c8": "^0.29.7",
+    "jsdom": "^21.1.1",
     "vite": "^4.1.0",
     "vitest": "^0.29.7"
   }
