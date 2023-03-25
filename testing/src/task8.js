@@ -5,8 +5,10 @@ const windowProperty = () => window.foo || (window.foo = "bar");
 
 // in-source test suites
 if (import.meta.vitest) {
-  const { it, expect } = import.meta.vitest;
-  it("windowFoo", () => {
-    expect(windowProperty()).toBe("bar");
+  const { it, expect, describe } = import.meta.vitest;
+  describe("windowProperty", () => {
+    it("foo", () => {
+      expect(windowProperty()).toBe("bar");
+    });
   });
 }

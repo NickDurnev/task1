@@ -13,3 +13,15 @@ npm run static2
 ```
 
 Run second static page.
+
+```bash
+npm run test
+```
+
+Run tests from testing workspace.
+
+```bash
+npm run coverage
+```
+
+Run coverage report for tests from testing workspace.

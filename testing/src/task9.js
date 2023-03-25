@@ -12,16 +12,18 @@ const showAlert = () => {
 
 // in-source test suites
 if (import.meta.vitest) {
-  const { it, expect, vi } = import.meta.vitest;
+  const { it, expect, vi, describe } = import.meta.vitest;
   const alertSpy = vi.spyOn(window, "alert");
-  it("alerts", () => {
-    try {
-      showAlert();
-      expect(alertSpy).toHaveBeenCalledTimes(1);
-      expect(alertSpy).toHaveBeenCalledWith("Hello World");
-    } catch (error) {
-      expect(error).toBeInstanceOf(Error);
-      expect(error.message).toBe("bar is not defined");
-    }
+  describe("showAlert", () => {
+    it("test1", () => {
+      try {
+        showAlert();
+        expect(alertSpy).toHaveBeenCalledTimes(1);
+        expect(alertSpy).toHaveBeenCalledWith("Hello World");
+      } catch (error) {
+        expect(error).toBeInstanceOf(Error);
+        expect(error.message).toBe("bar is not defined");
+      }
+    });
   });
 }
