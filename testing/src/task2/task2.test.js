@@ -6,6 +6,7 @@ describe("fizzBuzz", () => {
     console.log = vi.fn();
     fizzBuzz();
 
+    expect(console.log).not.toHaveBeenCalledTimes(1);
     expect(console.log).toHaveBeenCalledTimes(100);
     expect(console.log.mock.calls[2][0]).toEqual(3, "fizz");
     expect(console.log.mock.calls[4][0]).toEqual(5, "buzz");

@@ -23,5 +23,12 @@ if (import.meta.vitest) {
 
       logSpy.mockRestore();
     });
+    it("integerNumbers", () => {
+      const logSpy = vi.spyOn(global.console, "log");
+      logger(1, 2, 3);
+      expect(logSpy).toHaveBeenCalledWith(true);
+
+      logSpy.mockRestore();
+    });
   });
 }
